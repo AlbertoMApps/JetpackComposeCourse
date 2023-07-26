@@ -29,6 +29,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.alberto.compose.R
+import com.alberto.compose.ui.Message
 import com.alberto.compose.ui.messages
 import com.alberto.compose.ui.theme.JetpackComposeCourseTheme
 
@@ -122,8 +123,6 @@ fun PreviewMessageCard() {
         }
     }
 }
-
-data class Message(val author: String, val body: String)
 
 @Composable
 fun Conversation(messages: List<Message>) {
