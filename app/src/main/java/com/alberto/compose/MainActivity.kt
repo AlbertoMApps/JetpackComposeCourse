@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.alberto.compose.ui.messages
 import com.alberto.compose.ui.screens.Conversation
+import com.alberto.compose.ui.screens.MyApp
 import com.alberto.compose.ui.theme.JetpackComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,6 +24,9 @@ class MainActivity : ComponentActivity() {
                 ) {
                     //1. First composable method
                     Conversation(messages = messages)
+                    //2. Codelab for composable
+                    MyApp(modifier = Modifier.fillMaxSize())
+                    
                 }
             }
         }
