@@ -117,7 +117,7 @@ fun PreviewMessageCard() {
     JetpackComposeCourseTheme {
         Surface {
             MessageCard(
-                message = Message("Alberto", "Hello Jetpack Compose"),
+                message = Message(author = "Alberto", body = "Hello Jetpack Compose"),
                 modifier = Modifier.padding(all = 8.dp)
             )
         }
