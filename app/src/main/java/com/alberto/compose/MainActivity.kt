@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.alberto.compose.ui.messages
 import com.alberto.compose.ui.screens.Conversation
+import com.alberto.compose.ui.screens.HomeScreenPreview
 import com.alberto.compose.ui.screens.MyApp
 import com.alberto.compose.ui.theme.JetpackComposeCourseTheme
 
@@ -26,7 +27,8 @@ class MainActivity : ComponentActivity() {
                     Conversation(messages = messages)
                     //2. Codelab for composable
                     MyApp(modifier = Modifier.fillMaxSize())
-                    
+                    //3.Code lab for Basic layouts in Compose - MySootheApp
+                    HomeScreenPreview()
                 }
             }
         }

@@ -15,9 +15,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -49,7 +49,7 @@ fun MessageCard(message: Message, modifier: Modifier = Modifier) {
             modifier = Modifier
                 .size(40.dp)
                 .clip(CircleShape)
-                .border(1.5.dp, MaterialTheme.colorScheme.primary, MaterialTheme.shapes.small)
+                .border(1.5.dp, MaterialTheme.colors.primary, MaterialTheme.shapes.small)
         )
     }
     Spacer(modifier = modifier)
@@ -66,7 +66,7 @@ fun MessageCard(message: Message, modifier: Modifier = Modifier) {
 
     // surfaceColor will be updated gradually from one color to the other
     val surfaceColor by animateColorAsState(
-        if (isExpanded) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface,
+        if (isExpanded) MaterialTheme.colors.primary else MaterialTheme.colors.surface,
     )
 
     // We toggle the isExpanded variable when we click on this Column
@@ -74,14 +74,14 @@ fun MessageCard(message: Message, modifier: Modifier = Modifier) {
         Text(
             text = message.author,
             modifier = modifier,
-            color = MaterialTheme.colorScheme.secondary,
-            style = MaterialTheme.typography.titleSmall
+            color = MaterialTheme.colors.secondary,
+            style = MaterialTheme.typography.h1
         )
         Spacer(modifier = Modifier.height(4.dp))
 
         Surface(
             shape = MaterialTheme.shapes.medium,
-            shadowElevation = 1.dp,
+            elevation = 1.dp,
             // surfaceColor color will be changing gradually from primary to surface
             color = surfaceColor,
             // animateContentSize will change the Surface size gradually
@@ -93,9 +93,9 @@ fun MessageCard(message: Message, modifier: Modifier = Modifier) {
             Text(
                 text = message.body,
                 modifier = modifier,
-                color = MaterialTheme.colorScheme.secondary,
+                color = MaterialTheme.colors.secondary,
                 maxLines = if (isExpanded) Int.MAX_VALUE else 1,
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.h1
             )
         }
     }

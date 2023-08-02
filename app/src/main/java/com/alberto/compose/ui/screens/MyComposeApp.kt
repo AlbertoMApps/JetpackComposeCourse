@@ -12,18 +12,17 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.Button
+import androidx.compose.material.Card
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -85,7 +84,7 @@ private fun GreetingFirst(name: String) {
     )
 
     Surface(
-        color = MaterialTheme.colorScheme.primary,
+        color = MaterialTheme.colors.primary,
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
         Row(modifier = Modifier.padding(24.dp)) {
@@ -96,7 +95,7 @@ private fun GreetingFirst(name: String) {
             ) {
                 Text(text = "Hello, ")
                 Text(
-                    text = name, style = MaterialTheme.typography.headlineMedium.copy(
+                    text = name, style = MaterialTheme.typography.h1.copy(
                         fontWeight = FontWeight.ExtraBold
                     )
                 )
@@ -113,9 +112,7 @@ private fun GreetingFirst(name: String) {
 @Composable
 private fun Greeting(name: String) {
     Card(
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primary
-        ),
+        contentColor = MaterialTheme.colors.primary,
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
         CardContent(name)
@@ -143,7 +140,7 @@ private fun CardContent(name: String) {
         ) {
             Text(text = "Hello, ")
             Text(
-                text = name, style = MaterialTheme.typography.headlineMedium.copy(
+                text = name, style = MaterialTheme.typography.h2.copy(
                     fontWeight = FontWeight.ExtraBold
                 )
             )

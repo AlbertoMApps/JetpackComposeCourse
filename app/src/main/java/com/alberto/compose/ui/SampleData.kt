@@ -12,7 +12,7 @@ val messages = listOf(
     Message(
         "Example",
         "Jetpack compose",
-        androidx.core.R.drawable.ic_call_answer,
+        androidx.core.R.drawable.ic_call_answer_video,
         R.string.app_name
     )
 )
@@ -20,6 +20,6 @@ val messages = listOf(
 data class Message(
     val author: String,
     val body: String,
-    val drawableRes: Int? = null,
-    val stringRes: Int? = null
+    val drawableRes: Int = androidx.core.R.drawable.ic_call_answer,
+    val stringRes: Int = R.string.app_name
 )
