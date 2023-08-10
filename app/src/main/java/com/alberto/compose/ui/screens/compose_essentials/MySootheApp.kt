@@ -1,4 +1,4 @@
-package com.alberto.compose.ui.screens
+package com.alberto.compose.ui.screens.compose_essentials
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

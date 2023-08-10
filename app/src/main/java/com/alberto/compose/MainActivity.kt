@@ -8,10 +8,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.alberto.compose.ui.messages
-import com.alberto.compose.ui.screens.Conversation
-import com.alberto.compose.ui.screens.MyApp
-import com.alberto.compose.ui.screens.MySootheApp
-import com.alberto.compose.ui.screens.WellnessScreen
+import com.alberto.compose.ui.screens.compose_essentials.Conversation
+import com.alberto.compose.ui.screens.compose_essentials.MyApp
+import com.alberto.compose.ui.screens.compose_essentials.MySootheApp
+import com.alberto.compose.ui.screens.compose_essentials.WellnessScreen
 import com.alberto.compose.ui.theme.JetpackComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,6 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    //Compose essentials
                     //1. First composable method
                     Conversation(messages = messages)
                     //2. Codelab for composable
@@ -32,6 +33,8 @@ class MainActivity : ComponentActivity() {
                     MySootheApp()
                     //4 State in Jetpack compose.
                     WellnessScreen()
+                    //Material design
+
                 }
             }
         }

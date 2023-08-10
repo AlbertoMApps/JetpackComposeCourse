@@ -1,4 +1,4 @@
-package com.alberto.compose.ui.screens
+package com.alberto.compose.ui.screens.compose_essentials
 
 import androidx.compose.runtime.toMutableStateList
 import androidx.lifecycle.ViewModel

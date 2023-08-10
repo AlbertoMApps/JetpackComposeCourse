@@ -1,4 +1,4 @@
-package com.alberto.compose.ui.screens
+package com.alberto.compose.ui.screens.compose_essentials
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.animation.animateContentSize
