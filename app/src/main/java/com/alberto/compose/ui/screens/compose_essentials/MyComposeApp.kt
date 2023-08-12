@@ -196,6 +196,7 @@ fun OnboardingScreen(
 @Composable
 fun PreviewMyApp() {
     JetpackComposeCourseTheme {
-        MyApp(modifier = Modifier.fillMaxSize())
+//        MyApp(modifier = Modifier.fillMaxSize())
+        Greetings(Modifier.fillMaxSize(), listOf("Aberto", "Name1", "Name2"))
     }
 }

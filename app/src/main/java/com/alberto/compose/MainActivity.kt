@@ -33,7 +33,9 @@ class MainActivity : ComponentActivity() {
                     MySootheApp()
                     //4 State in Jetpack compose.
                     WellnessScreen()
-                    //Material design
+
+                    //Material design, layouts, theming and animation
+
 
                 }
             }
