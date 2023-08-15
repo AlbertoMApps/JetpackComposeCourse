@@ -18,6 +18,7 @@ import com.alberto.compose.ui.screens.compose_essentials.MySootheApp
 import com.alberto.compose.ui.screens.compose_essentials.WellnessScreen
 import com.alberto.compose.ui.screens.material_design.ReplyApp
 import com.alberto.compose.ui.screens.material_design.ReplyHomeViewModel
+import com.alberto.compose.ui.screens.material_design.homeAnimation.Home
 import com.alberto.compose.ui.theme.JetpackComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -57,6 +58,8 @@ class MainActivity : ComponentActivity() {
                             }
                         )
                     }
+
+                    Home()
                 }
             }
         }
