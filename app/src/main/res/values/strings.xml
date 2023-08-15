@@ -4,4 +4,29 @@
     <string name="show_more">Show more</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
+
+    <string name="navigation_drawer">Navigation Drawer</string>
+    <string name="tab_inbox">Inbox</string>
+    <string name="tab_article">Articles</string>
+    <string name="tab_dm">Direct Messages</string>
+    <string name="tab_groups">Groups</string>
+
+    <string name="search">Search</string>
+    <string name="search_replies">Search replies</string>
+    <string name="reply">Reply</string>
+    <string name="reply_all">Reply All</string>
+
+    <string name="edit">Edit</string>
+    <string name="compose">Compose</string>
+
+    <string name="empty_screen_title">Screen under construction</string>
+    <string name="empty_screen_subtitle">This screen is still under construction.</string>
+
+    <string name="back_button">Back</string>
+    <string name="more_options_button">More options</string>
+    <string name="messages">Messages</string>
+    <string name="four_hours_ago">4 hrs ago</string>
+    <string name="twenty_mins_ago">20 mins ago</string>
+    <string name="description_favorite">Favorite</string>
+
 </resources>
