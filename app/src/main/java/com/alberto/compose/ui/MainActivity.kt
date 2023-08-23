@@ -11,7 +11,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.alberto.compose.ui.messages
+import com.alberto.compose.ui.details.launchDetailsActivity
+import com.alberto.compose.ui.home.MainScreen
 import com.alberto.compose.ui.screens.compose_essentials.Conversation
 import com.alberto.compose.ui.screens.compose_essentials.MyApp
 import com.alberto.compose.ui.screens.compose_essentials.MySootheApp
@@ -60,6 +61,15 @@ class MainActivity : ComponentActivity() {
                     }
 
                     Home()
+
+                    //Advanced state and side effects
+                    MainScreen(onExploreItemClicked = {
+                        launchDetailsActivity(
+                            context = this,
+                            item = it
+                        )
+                    })
+
                 }
             }
         }
