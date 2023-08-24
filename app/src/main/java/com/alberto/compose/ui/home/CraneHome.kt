@@ -29,14 +29,15 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.alberto.compose.base.CraneDrawer
 import com.alberto.compose.base.CraneTabBar
 import com.alberto.compose.base.CraneTabs
 import com.alberto.compose.base.ExploreSection
 import com.alberto.compose.data.ExploreModel
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.lifecycle.viewmodel.compose.viewModel
 
 typealias OnExploreItemClicked = (ExploreModel) -> Unit
 
@@ -77,7 +78,8 @@ fun CraneHomeContent(
     viewModel: MainViewModel = viewModel(),
 ) {
     // TODO Codelab: collectAsStateWithLifecycle step - consume stream of data from the ViewModel
-    val suggestedDestinations: List<ExploreModel> = remember { emptyList() }
+//    val suggestedDestinations: List<ExploreModel> = remember { emptyList() }
+    val suggestedDestinations by viewModel.suggestedDestinations.collectAsStateWithLifecycle()
 
     val onPeopleChanged: (Int) -> Unit = { viewModel.updatePeople(it) }
     var tabSelected by remember { mutableStateOf(CraneScreen.Fly) }
@@ -105,6 +107,7 @@ fun CraneHomeContent(
                         onItemClicked = onExploreItemClicked
                     )
                 }
+
                 CraneScreen.Sleep -> {
                     ExploreSection(
                         title = "Explore Properties by Destination",
@@ -112,6 +115,7 @@ fun CraneHomeContent(
                         onItemClicked = onExploreItemClicked
                     )
                 }
+
                 CraneScreen.Eat -> {
                     ExploreSection(
                         title = "Explore Restaurants by Destination",
@@ -155,9 +159,11 @@ private fun SearchContent(
             onPeopleChanged = onPeopleChanged,
             onToDestinationChanged = { viewModel.toDestinationChanged(it) }
         )
+
         CraneScreen.Sleep -> SleepSearchContent(
             onPeopleChanged = onPeopleChanged
         )
+
         CraneScreen.Eat -> EatSearchContent(
             onPeopleChanged = onPeopleChanged
         )
